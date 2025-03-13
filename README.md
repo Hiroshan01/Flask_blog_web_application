@@ -10,11 +10,7 @@ This is a simple blog application built using Flask. It allows users to create, 
   - Create, update, and delete posts
   - View a list of posts and individual posts
 
-## Development Guidelines
-- Use the Flask Blueprint structure for organizing the application.
-- Implement ORM with Flask SQLAlchemy for database interactions.
-- Use Flask Migrations for database version control.
-- Implement authentication using Flask-Login.
+
 
 ## Installation
 
