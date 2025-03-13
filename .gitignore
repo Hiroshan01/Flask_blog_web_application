@@ -1,0 +1,30 @@
+# Environment variables
+.env
+
+# Virtual environment
+
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# Log files
+*.log
+
+# Other files
+*.pot
+*.egg-info/
+dist/
+build/
+.node_modules
+.package-lock.json
+.package.json

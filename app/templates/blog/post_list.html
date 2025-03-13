@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <h2>Posts</h2>
+    <a href="{{ url_for('blog.new_post') }}">Create New Post</a>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{{ url_for('blog.post_detail', post_id=post.id) }}">{{ post.title }}</a>
+            <!--<form action="{{ url_for('blog.delete_post', post_id=post.id) }}" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>-->
+            </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
